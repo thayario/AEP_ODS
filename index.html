@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <div class="title">
+                <span class="med">MED</span><span class="calc">Calc</span>
+            </div>
+            <div class="buttons">
+                <li>
+                    <a href="#calculadoras">Calculadoras</a>
+                </li>
+                <li>
+                    <a href="#alert">Alerta de Insulina</a>
+                </li>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="overlay">
+            <h1>Bem-vindo ao Seu Portal de Educação Alimentar e Saúde</h1>
+            <p>Nosso site é dedicado a promover um estilo de vida saudável por meio de ferramentas e informações
+                essenciais
+                sobre nutrição e bem-estar. Acreditamos que a saúde começa com a educação, e por isso, oferecemos
+                recursos
+                práticos para ajudá-lo a manter-se saudável.</p>
+        </div>
+    </div>
+    <div class="container" id="imc">
+        <section class="calculadoras" id="calculadoras">
+            <div class="imc-style">
+                <h2>Calculadora de IMC</h2>
+                <p>A Calculadora de Índice de Massa Corporal (IMC) é uma ferramenta simples que ajuda a avaliar se você
+                    está em um peso saudável para sua altura. Basta inserir sua altura e peso, e nossa calculadora
+                    fornecerá seu IMC, ajudando você a entender melhor sua composição corporal.</p>
+                <form>
+                    <p>Altura</p>
+                    <input type="number" placeholder="Metros" id="inputMetrosImc" required>
+                    <p>Peso</p>
+                    <input type="number" placeholder="Quilos" id="inputQuilosImc" required>
+                    <button onclick="CalcularIMC()">Calcular IMC</button>
+                    <button onclick="LimparCamposIMC()">Limpar</button>
+                    <h1>Seu IMC é:</h1>
+                    <h1 id="resultado"></h1>
+                </form>
+            </div>
+            <div class="txBasal-style">
+                <h2>Calculadora de Taxa Basal</h2>
+                <p>A Taxa Metabólica Basal (TMB) é o número de calorias que seu corpo necessita para manter as funções
+                    vitais
+                    enquanto em repouso. Nossa calculadora de TMB considera fatores como sexo, peso, altura e idade para
+                    fornecer
+                    uma estimativa precisa, ajudando você a planejar melhor sua alimentação e necessidades calóricas
+                    diárias.</p>
+                <form>
+                    <label for="sexM">Mulher</label>
+                    <input type="radio" id="sexM" name="sexo" value="mulher" required>
+                    <label for="sexH">Homem</label>
+                    <input type="radio" id="sexH" name="sexo" value="homem" required>
+                    <p>Peso:</p>
+                    <input type="number" placeholder="Ex: 62,5" id="inputQuilosBs" required>
+                    <p>Altura</p>
+                    <input type="number" placeholder="Metros" id="inputMetrosBs" required>
+                    <p>Idade:</p>
+                    <input type="number" placeholder="Ex: 35" id="inputIdadeBs" required>
+                    <button onclick="CalcularTxBasal()">Calcular</button>
+                    <button onclick="LimparCamposTxBa()">Limpar</button>
+                    <h1>Sua Taxa Basal é:</h1>
+                    <h1 id="resultadoTxBa"></h1>
+                </form>
+            </div>
+        </section>
+    </div>
+    <section class="alert" id="alert">
+        <h2>Alerta de Insulina</h2>
+        <p>Para aqueles que precisam monitorar seus níveis de insulina, oferecemos um sistema de alerta personalizado.
+            Você
+            pode configurar lembretes para medir e administrar sua insulina, garantindo que você nunca perca um momento
+            importante para a sua saúde.</p>
+        <input type="time" id="horaEvento">
+        <button type="button" onclick="CriarAlerta()">Criar alerta</button>
+    </section>
+    <div class="message">
+        <h2>Viva Melhor, Viva Saudável</h2>
+        <br>
+        <p>Nosso objetivo é facilitar o acesso a informações de saúde e ferramentas práticas que promovam hábitos
+            alimentares saudáveis e um estilo de vida equilibrado. Explore nossos recursos, mantenha-se informado e tome
+            as
+            rédeas de sua saúde de maneira simples e eficiente.
+
+            Acreditamos que pequenos passos diários podem levar a grandes mudanças na sua qualidade de vida. Junte-se a
+            nós
+            nesta jornada rumo a uma vida mais saudável e feliz.</p>
+    </div>
+
+    <footer>
+        <p>&copy; AEP Unicesumar - 2024</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
